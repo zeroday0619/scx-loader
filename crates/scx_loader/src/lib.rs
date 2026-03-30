@@ -42,6 +42,8 @@ pub enum SupportedSched {
     Cake,
     #[serde(rename = "scx_pandemonium")]
     Pandemonium,
+    #[serde(rename = "scx_chaos")]
+    Chaos,
 }
 
 impl FromStr for SupportedSched {
@@ -52,6 +54,7 @@ impl FromStr for SupportedSched {
             "scx_beerland" => Ok(SupportedSched::Beerland),
             "scx_bpfland" => Ok(SupportedSched::Bpfland),
             "scx_cake" => Ok(SupportedSched::Cake),
+            "scx_chaos" => Ok(SupportedSched::Chaos),
             "scx_cosmos" => Ok(SupportedSched::Cosmos),
             "scx_flash" => Ok(SupportedSched::Flash),
             "scx_lavd" => Ok(SupportedSched::Lavd),
@@ -78,6 +81,7 @@ impl From<SupportedSched> for &str {
             SupportedSched::Beerland => "scx_beerland",
             SupportedSched::Bpfland => "scx_bpfland",
             SupportedSched::Cake => "scx_cake",
+            SupportedSched::Chaos => "scx_chaos",
             SupportedSched::Cosmos => "scx_cosmos",
             SupportedSched::Flash => "scx_flash",
             SupportedSched::Lavd => "scx_lavd",
