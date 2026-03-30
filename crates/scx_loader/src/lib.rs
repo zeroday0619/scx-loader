@@ -44,6 +44,8 @@ pub enum SupportedSched {
     Pandemonium,
     #[serde(rename = "scx_chaos")]
     Chaos,
+    #[serde(rename = "scx_mitosis")]
+    Mitosis,
 }
 
 impl FromStr for SupportedSched {
@@ -58,6 +60,7 @@ impl FromStr for SupportedSched {
             "scx_cosmos" => Ok(SupportedSched::Cosmos),
             "scx_flash" => Ok(SupportedSched::Flash),
             "scx_lavd" => Ok(SupportedSched::Lavd),
+            "scx_mitosis" => Ok(SupportedSched::Mitosis),
             "scx_pandemonium" => Ok(SupportedSched::Pandemonium),
             "scx_p2dq" => Ok(SupportedSched::P2DQ),
             "scx_tickless" => Ok(SupportedSched::Tickless),
@@ -85,6 +88,7 @@ impl From<SupportedSched> for &str {
             SupportedSched::Cosmos => "scx_cosmos",
             SupportedSched::Flash => "scx_flash",
             SupportedSched::Lavd => "scx_lavd",
+            SupportedSched::Mitosis => "scx_mitosis",
             SupportedSched::Pandemonium => "scx_pandemonium",
             SupportedSched::P2DQ => "scx_p2dq",
             SupportedSched::Tickless => "scx_tickless",
